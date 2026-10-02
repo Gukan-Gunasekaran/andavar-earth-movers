@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import jcb from "./assets/jcb.jpg";
 import mf from "./assets/mf.jpg";
+import Admin from "./Admin";
 
 function Body() {
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100">
+    <div className="d-flex justify-content-center align-items-center vh-100 m-2">
       <div className="card me-2" style={{ height: "250px", width: "200px" }}>
         <div className="card-body">
           <center>
@@ -28,6 +29,7 @@ function Body() {
             <Link className="btn btn-primary mt-auto" to="#">
               prebook
             </Link>
+            <Link className="btn btn-secondary" to="Admin" > Admin Board </Link>
           </center>
         </div>
       </div>
