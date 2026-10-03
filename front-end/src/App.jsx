@@ -4,6 +4,9 @@ import {Router,Routes,Route, BrowserRouter} from 'react-router-dom';
 import Navbar from './Navbar';
 import Body from './Body';
 import Admin from './Admin';
+import LoaderForm from './LoaderForm';
+import TractorForm from './TractorForm';
+import Footer from './Footer';
 
 function App() {
 
@@ -14,8 +17,11 @@ function App() {
     <Routes>
       <Route path='/' element={<><Navbar/> <Body/></>}/>
       <Route path='/admin' element={<Admin/>}/>
+      <Route path='/loaderForm' element={<LoaderForm/>}/>
+      <Route path='/tractorForm' element={<TractorForm/>}/>
     </Routes>
     </BrowserRouter>
+    <Footer/>
    </div>
   )
 }
