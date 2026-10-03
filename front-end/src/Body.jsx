@@ -46,7 +46,7 @@ function Body() {
               <h1> Loader </h1>
 
               <br />
-              <img src={jcb} className="card-img-top mb-3" alt="jcb" />
+              <img src={jcb} className="card-img-top mb-3 me-2" alt="jcb" />
               <br />
               <ul className="text-bold text-primary mb-2 mt-5">
                 <li>Construction</li>
