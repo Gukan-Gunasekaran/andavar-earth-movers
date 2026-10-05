@@ -7,6 +7,7 @@ import Admin from './Admin';
 import LoaderForm from './LoaderForm';
 import TractorForm from './TractorForm';
 import Footer from './Footer';
+import "./App.css";
 
 function App() {
 

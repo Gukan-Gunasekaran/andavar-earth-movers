@@ -21,10 +21,10 @@ function Body() {
         </span>
       </div>
 
-      <div className=" d-flex justify-content-center align-items-center m-3">
-        <div className="card me-2" style={{ height: "500px", width: "400px" }}>
-          <center>
-            <div className="card-body">
+      <div className=" d-flex justify-content-center align-items-center m-3 gap-3">
+        <div className="card card-hover" style={{ height: "500px", width: "400px" }}>
+          
+            <div className="card-body text-center">
               <h1 className="card-title"> Tractor</h1>
               <img src={mf} className="card-img-top" alt="tractor" />
               <br />
@@ -37,12 +37,12 @@ function Body() {
                 prebook
               </Link>
             </div>
-          </center>
+          
         </div>
 
-        <div className="card" style={{ height: "500px", width: "400px" }}>
-          <center>
-            <div className="card-body">
+        <div className="card card-hover" style={{ height: "500px", width: "400px" }}>
+       
+            <div className="card-body text-center">
               <h1> Loader </h1>
 
               <br />
@@ -57,7 +57,7 @@ function Body() {
                 prebook
               </Link>
             </div>
-          </center>
+          
         </div>
       </div>
     </div>
