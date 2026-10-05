@@ -6,8 +6,8 @@ import developer from "./assets/developer.jpg";
 function Body() {
   return (
     <div>
-      <div className="d-flex mt-4 justify-content-center align-items-top">
-        <span className="ps-3 bg-dark m-2 rounded border-secondary">
+      <div className="d-flex flex-column  flex-md-row mt-4 justify-content-center align-items-center m-2 gap-2">
+        <span className="ps-3 bg-dark rounded border-secondary">
           <h1 className="text-primary">
             Hello everyone i'm naveen Gnanasekaran <br />
             ,we are offering Tractor and Loader Services <br />
@@ -17,18 +17,24 @@ function Body() {
           </h1>
         </span>
         <span>
-          <img src={developer} height="300" width="275" alt="" className="rounded " />
+          <img
+            src={developer}
+            alt="deceloper"
+            className="img-fluid rounded "
+            style={{ maxWidth: "270px" }}
+          />
         </span>
       </div>
 
-      <div className=" d-flex justify-content-center align-items-center m-3 gap-3">
-        <div className="card card-hover" style={{ height: "500px", width: "400px" }}>
-          
+      <div className="row justify-content-center g-4 m-3">
+
+        <div className="col-12 col-md-6 col-lg-5">
+          <div className="card card-hover">
             <div className="card-body text-center">
               <h1 className="card-title"> Tractor</h1>
               <img src={mf} className="card-img-top" alt="tractor" />
               <br />
-               <ul className="text-bold text-primary mb-1">
+              <ul className="text-bold text-primary mb-1">
                 <li>Cultivation</li>
                 <li>Fertilizing</li>
                 <li>Loading</li>
@@ -37,11 +43,11 @@ function Body() {
                 prebook
               </Link>
             </div>
-          
+          </div>
         </div>
 
-        <div className="card card-hover" style={{ height: "500px", width: "400px" }}>
-       
+        <div className="col-12 col-md-6 col-lg-5">
+          <div className="card card-hover">
             <div className="card-body text-center">
               <h1> Loader </h1>
 
@@ -57,8 +63,9 @@ function Body() {
                 prebook
               </Link>
             </div>
-          
+          </div>
         </div>
+
       </div>
     </div>
   );
