@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import jcb from "./assets/jcb.jpg";
 import mf from "./assets/mf.jpg";
 import developer from "./assets/developer.jpg";
+import naveen from "./assets/naveen.jpeg"
 
 function Body() {
   return (
     <div>
       <div className="d-flex flex-column  flex-md-row mt-4 justify-content-center align-items-center m-2 gap-2">
-        <span className="ps-3 bg-dark rounded border-secondary">
-          <h1 className="text-primary">
+        <span className="ps-3 rounded border-secondary">
+          <h1 className="">
             Hello everyone i'm naveen Gnanasekaran <br />
             ,we are offering Tractor and Loader Services <br />
             for Farming,Cultivation and fertilization,
@@ -18,10 +19,10 @@ function Body() {
         </span>
         <span>
           <img
-            src={developer}
-            alt="deceloper"
+            src={naveen}
+            alt="founder"
             className="img-fluid rounded "
-            style={{ maxWidth: "270px" }}
+            style={{ maxWidth: "280px" }}
           />
         </span>
       </div>

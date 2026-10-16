@@ -1,50 +1,50 @@
-import { Link } from "react-router-dom";
+import line from "./dashboards/line.jpg";
+import { useState } from "react";
 
 function Admin() {
+
+  const [Img,setImg]= useState(line);
+
   return (
     <div className="d-flex">
       <aside
         className="bg-secondary p-3 "
         style={{ width: "200px", minHeight: "100vh" }}
       >
-        <ul className="nav flex-column">
+        <ul className="nav flex-column gap-4">
           <li className="nav-item">
-            <Link to="#" className="nav-link text-white">
-              Home
-            </Link>
+              <button className="nav-button text-light bg-transparent border-0">Home</button>
           </li>
 
           <li className="nav-item">
-            <Link to="#" className="nav-link text-white">
+            <button  className="nav-button text-white bg-transparent border-0" onClick={()=>setImg(line)}>
               Analysis
-            </Link>
+            </button>
           </li>
 
           <li className="nav-item">
-            <Link to="#" className="nav-link text-white">
+            <button  className="nav-button text-white bg-transparent border-0" onClick={()=>setImg(line)}>
               Growth
-            </Link>
+            </button>
           </li>
 
            <li className="nav-item">
-            <Link to="#" className="nav-link text-white">
+            <button  className="nav-button text-white bg-transparent border-0" onClick={()=>setImg(line)}>
               Expence
-            </Link>
+            </button>
           </li>
 
           <li className="nav-item">
-            <Link to="#" className="nav-link text-white">
+            <button  className="nav-button text-white bg-transparent border-0 " onClick={()=>setImg(line)}>
               Settings
-            </Link>
+            </button>
           </li>
         </ul>
       </aside>
-
-      <main className="p-4 flex-grow-1">
-        <h1>Dashboard</h1>
-        <canvas id="line" height={400} width={400}>
-
-        </canvas>
+      <main>
+        <div className="m-4">
+          <img src={Img} alt="line" className="img-fluid" />
+        </div>
       </main>
     </div>
   );

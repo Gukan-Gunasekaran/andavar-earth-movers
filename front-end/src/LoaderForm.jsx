@@ -4,8 +4,8 @@ function LoaderForm() {
   return (
     <>
       <center>
-        <div className=" d-flex mt-4" style={{ width: "400px" }}>
-          <div className="card w-100">
+        <div className=" d-flex justify-content-center align-items-center m-4 vh-100 w-75">
+          <div className="card">
             <form className="form">
               <h1 className="card-header bg-primary text-light">
                 Pre-book Loader
@@ -28,7 +28,11 @@ function LoaderForm() {
                   <label htmlFor="area" className="me-2">
                     Area:
                   </label>
-                  <input type="text" id="area" className="form-control form-control-lg mb-2" />
+                  <input
+                    type="text"
+                    id="area"
+                    className="form-control form-control-lg mb-2"
+                  />
                 </div>
 
                 <div>

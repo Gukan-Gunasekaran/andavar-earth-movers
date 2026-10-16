@@ -5,10 +5,9 @@ function TractorForm() {
     <>
       <center>
         <div
-          className=" d-flex mt-4"
-          style={{ width: "400px" }}
+          className=" d-flex justify-content-center align-items-center mt-4 w-75 vh-100"
         >
-          <div className="card w-100">
+          <div className="card">
           <form className="form">
             <h1 className="card-header bg-primary text-light">
               Pre-book Tractor
