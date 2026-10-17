@@ -1,6 +1,15 @@
 function Footer(){
     return(
+        <>
+<style>
+    {`
 
+      .footer-link{
+          color:white;
+          text-decoration:none;
+      }
+    `}
+</style>
 <div className="bg-dark text-light py-5">
     <div className="container">
         <div className="row g-4">
@@ -21,7 +30,7 @@ function Footer(){
             <div className="col-lg-2 col-md-6">
                 <h5 className="mb-4">Loader</h5>
                 <ul className="list-unstyled">
-                    <li className="mb-2"><a href="#" className="footer-link">Ground-Tapper</a></li>
+                    <li className="mb-2"><a href="#" className="footer-link ">Ground-Tapper</a></li>
                     <li className="mb-2"><a href="#" className="footer-link">Piller-Pits</a></li>
                     <li className="mb-2"><a href="#" className="footer-link">Dwelling</a></li>
                     <li className="mb-2"><a href="#" className="footer-link">Portfolio</a></li>
@@ -45,15 +54,15 @@ function Footer(){
                 <h5 className="mb-4">Contact Info</h5>
                 <ul className="list-unstyled">
                     <li className="mb-3">
-                        <i className="fas fa-map-marker-alt me-2"></i>
+                        <i className="bi bi-geo-fill me-2"></i>
                         123 keela Street,<br />Paranam,sendurai tk,<br />ariyalur dt,<br />621804
                     </li>
                     <li className="mb-3">
-                        <i className="fas fa-phone me-2"></i>
+                        <i className="bi bi-telephone-fill me-2"></i>
                         <a href="tel:+919360640844" className="footer-link">+919360640844</a>
                     </li>
                     <li className="mb-3">
-                        <i className="fas fa-envelope me-2"></i>
+                        <i className="bi bi-envelope-fill me-2"></i>
                         <a href="mailto:gnanasekarannaveen32@gmail.com" className="footer-link">gnanasekarannaveen32@gmail.com</a>
                     </li>
                 </ul>
@@ -71,6 +80,6 @@ function Footer(){
         </div>
     </div>
 </div>
-
+</>
     );
 }export default Footer;

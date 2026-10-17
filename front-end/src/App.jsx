@@ -8,12 +8,14 @@ import LoaderForm from './LoaderForm';
 import TractorForm from './TractorForm';
 import Footer from './Footer';
 import "./App.css";
+import ScrollTop from './ScrollTop';
 
 function App() {
 
   return (
    <div>
     <BrowserRouter>
+    <ScrollTop/>
     <Header/>
     <Routes>
       <Route path='/' element={<><Navbar/> <Body/></>}/>

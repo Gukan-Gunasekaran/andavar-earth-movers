@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 function TractorForm() {
   return (
     <>
-      <center>
         <div
-          className=" d-flex justify-content-center align-items-center mt-4 w-75 vh-100"
+          className=" d-flex justify-content-center align-items-center p-5"
         >
           <div className="card">
           <form className="form">
@@ -45,7 +44,6 @@ function TractorForm() {
           </form>
           </div>
         </div>
-      </center>
     </>
   );
 }
