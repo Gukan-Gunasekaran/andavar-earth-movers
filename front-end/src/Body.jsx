@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import jcb from "./assets/jcb.jpg";
 import mf from "./assets/mf.jpg";
 import naveen from "./assets/naveen.jpeg";
-import bolero from "./assets/bolero.jpg";
-import ertiga from "./assets/ertiga.jpg";
+import bolero from "./assets/Bolero.jpg";
+import ertiga from "./assets/Ertiga.jpg";
 
 function Body() {
   return (
