@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { useLocation,Link } from "react-router-dom";
 
 function TractorForm() {
+  const location = useLocation();
+  const title = location.state?.title || "Vehicle";
   return (
     <>
         <div
@@ -9,7 +11,7 @@ function TractorForm() {
           <div className="card">
           <form className="form">
             <h1 className="card-header bg-primary text-light">
-              Pre-book Tractor
+               book {title}
             </h1>
             <div className="card-body">
               <div className="d-flex mb-2 ">
