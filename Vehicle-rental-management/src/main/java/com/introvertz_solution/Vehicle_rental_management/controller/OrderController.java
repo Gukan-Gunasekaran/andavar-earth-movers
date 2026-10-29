@@ -1,6 +1,6 @@
 package com.introvertz_solution.Vehicle_rental_management.controller;
 
-import com.introvertz_solution.Vehicle_rental_management.entity.Order;
+import com.introvertz_solution.Vehicle_rental_management.entity.Orders;
 import com.introvertz_solution.Vehicle_rental_management.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,13 +8,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/order")
+@RequestMapping("/order")
+@CrossOrigin(origins = "http://localhost:5173/")
 public class OrderController {
     @Autowired
     OrderService orderService;
 
     @PostMapping("/save")
-    public Order saveOrder(@RequestBody Order o){
+    public Orders saveOrder(@RequestBody Orders o){
         return orderService.saveOrder(o);
     }
 

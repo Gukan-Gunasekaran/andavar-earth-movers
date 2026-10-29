@@ -4,9 +4,9 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table
+@Table(name="orders")
 @Data
-public class Order {
+public class Orders {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long o_id;
