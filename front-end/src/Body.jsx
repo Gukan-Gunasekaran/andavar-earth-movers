@@ -69,7 +69,7 @@ function Body() {
                     <li key={i}>{work}</li>
                   ))}
                 </ul>
-                <Link className="btn btn-primary mt-auto" to="TractorForm" state={{ title: image.title }}>
+                <Link className="btn btn-primary mt-auto" to="booking" state={{ title: image.title }}>
                   prebook
                 </Link>
               </div>

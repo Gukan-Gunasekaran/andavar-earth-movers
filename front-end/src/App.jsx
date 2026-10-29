@@ -4,11 +4,11 @@ import {Router,Routes,Route, BrowserRouter} from 'react-router-dom';
 import Navbar from './Navbar';
 import Body from './Body';
 import Admin from './Admin';
-import LoaderForm from './LoaderForm';
-import TractorForm from './TractorForm';
+import Booking from './Booking';
 import Footer from './Footer';
 import "./App.css";
 import ScrollTop from './ScrollTop';
+import axios from "axios";
 
 function App() {
 
@@ -20,8 +20,7 @@ function App() {
     <Routes>
       <Route path='/' element={<><Navbar/> <Body/></>}/>
       <Route path='/admin' element={<Admin/>}/>
-      <Route path='/loaderForm' element={<LoaderForm/>}/>
-      <Route path='/tractorForm' element={<TractorForm/>}/>
+      <Route path='/booking' element={<Booking/>}/>
     </Routes>
     </BrowserRouter>
     <Footer/>

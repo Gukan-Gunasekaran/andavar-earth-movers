@@ -69,7 +69,7 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
-            <Link className="btn" to="Admin">
+            <Link className="btn nav-link disabled" to="admin">
               <i className="bi bi-person-circle fs-4 me-2"></i>
             </Link>
 

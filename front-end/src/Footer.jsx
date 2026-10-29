@@ -55,7 +55,7 @@ function Footer(){
                 <ul className="list-unstyled">
                     <li className="mb-3">
                         <i className="bi bi-geo-fill me-2"></i>
-                        123 keela Street,<br />Paranam,sendurai tk,<br />ariyalur dt,<br />621804
+                       sendurai,ariyalur
                     </li>
                     <li className="mb-3">
                         <i className="bi bi-telephone-fill me-2"></i>
