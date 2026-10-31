@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/order")
 @CrossOrigin(origins = "http://localhost:5173/")
@@ -17,6 +19,11 @@ public class OrderController {
     @PostMapping("/save")
     public Orders saveOrder(@RequestBody Orders o){
         return orderService.saveOrder(o);
+    }
+
+    @GetMapping("/get")
+    public List<Orders> getOrders(){
+        return orderService.getOrders();
     }
 
     @DeleteMapping("/delete/{o_id}")

@@ -8,7 +8,7 @@ import Booking from './Booking';
 import Footer from './Footer';
 import "./App.css";
 import ScrollTop from './ScrollTop';
-import axios from "axios";
+import Orders from './Orders';
 
 function App() {
 
@@ -20,6 +20,7 @@ function App() {
     <Routes>
       <Route path='/' element={<><Navbar/> <Body/></>}/>
       <Route path='/admin' element={<Admin/>}/>
+      <Route path='/orders' element={<Orders/>}/>
       <Route path='/booking' element={<Booking/>}/>
     </Routes>
     </BrowserRouter>

@@ -5,12 +5,18 @@ import com.introvertz_solution.Vehicle_rental_management.repository.OrderRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class OrderService {
     @Autowired
     OrderRepo orderRepo;
     public Orders saveOrder(Orders o){
         return(orderRepo.save(o));
+    }
+
+    public List<Orders> getOrders(){
+        return orderRepo.findAll();
     }
 
     public boolean deleteOrder(Long o_id){
