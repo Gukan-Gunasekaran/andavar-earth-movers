@@ -5,7 +5,7 @@ function Orders() {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/order/get")
+      .get("https://andavar-earth-movers.onrender.com/order/get")
       .then((response) => setOrders(response.data))
       .catch((error) => console.error(error));
   }, []);

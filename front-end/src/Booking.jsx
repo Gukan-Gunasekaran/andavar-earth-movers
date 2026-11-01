@@ -10,7 +10,7 @@ function Booking() {
     const data = Object.fromEntries(formData.entries());
     try {
       const response = await axios.post(
-        "http://localhost:8080/order/save",
+        "https://andavar-earth-movers.onrender.com/order/save",
         data,
       );
       console.log(response.data);
