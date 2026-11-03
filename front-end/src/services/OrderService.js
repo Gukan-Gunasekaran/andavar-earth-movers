@@ -1,6 +1,6 @@
 import axios from "axios";
 
- const BASE_URL = "https://andavar-earth-movers.onrender.com";
+ const BASE_URL = "https://andavar-earth-movers.onrender.com/order";
 
  export const getOrders=()=>{
     return axios.get(`${BASE_URL}/get`);
