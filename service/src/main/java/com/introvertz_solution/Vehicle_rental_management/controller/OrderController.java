@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/order")
-@CrossOrigin(origins = "https://andavar-earth-movers.vercel.app/")
+@CrossOrigin(origins = {"https://andavar-earth-movers.vercel.app/", "http://localhost:5173/"})
 public class OrderController {
     @Autowired
     OrderService orderService;
@@ -26,13 +26,13 @@ public class OrderController {
         return orderService.getOrders();
     }
 
-    @DeleteMapping("/delete/{o_id}")
-    public ResponseEntity<?> removeOrder(@RequestParam Long o_id){
-        boolean deleted=orderService.deleteOrder(o_id);
+    @DeleteMapping("/delete/{d_id}")
+    public ResponseEntity<?> removeOrder(@PathVariable Long d_id){
+        boolean deleted=orderService.deleteOrder(d_id);
         if(deleted){
             return ResponseEntity.ok("order deleted");
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body("order wasn't available"+ o_id);
+                .body("order wasn't available"+ d_id);
     }
 }

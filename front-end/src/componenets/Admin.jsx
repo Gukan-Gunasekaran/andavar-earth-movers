@@ -1,4 +1,4 @@
-import line from "./dashboards/line.jpg";
+import line from "../dashboards/line.jpg";
 import { useState } from "react";
 
 function Admin() {

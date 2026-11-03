@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import jcb from "./assets/jcb.jpg";
-import mf from "./assets/mf.jpg";
-import naveen from "./assets/naveen.jpeg";
-import bolero from "./assets/Bolero.jpg";
-import ertiga from "./assets/Ertiga.jpg";
+import jcb from "../assets/jcb.jpg";
+import mf from "../assets/mf.jpg";
+import naveen from "../assets/naveen.jpeg";
+import bolero from "../assets/Bolero.jpg";
+import ertiga from "../assets/Ertiga.jpg";
 
 function Body() {
   const Imgs = [
@@ -66,7 +66,7 @@ function Body() {
                 <br />
                 <ul className="text-bold text-primary mb-1">
                   {Imgs[index].works.map((work, i) => (
-                    <li key={i}>{work}</li>
+                    <li className="nav-link text-dark text-decoration-none" key={i}>{work}</li>
                   ))}
                 </ul>
                 <Link className="btn btn-primary mt-auto" to="booking" state={{ title: image.title }}>

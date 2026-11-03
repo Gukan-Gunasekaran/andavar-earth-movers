@@ -2,6 +2,7 @@ function Footer(){
     return(
         <>
 <style>
+    
     {`
 
       .footer-link{
@@ -33,7 +34,6 @@ function Footer(){
                     <li className="mb-2"><a href="#" className="footer-link ">Ground-Tapper</a></li>
                     <li className="mb-2"><a href="#" className="footer-link">Piller-Pits</a></li>
                     <li className="mb-2"><a href="#" className="footer-link">Dwelling</a></li>
-                    <li className="mb-2"><a href="#" className="footer-link">Portfolio</a></li>
                     <li className="mb-2"><a href="#" className="footer-link">Contact</a></li>
                 </ul>
             </div>

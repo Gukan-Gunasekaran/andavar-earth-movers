@@ -14,6 +14,7 @@ function Booking() {
         data,
       );
       console.log(response.data);
+      alert("booked sucessfully");
     } catch (e) {
       console.error(e);
     }
@@ -44,6 +45,8 @@ function Booking() {
                 <input
                   type="number"
                   id="phno"
+                  maxLength={10}
+                  
                   className="form-control mb-2"
                   name="phone"
                 />
@@ -83,12 +86,12 @@ function Booking() {
                 <label htmlFor="district" className="me-2">
                   district
                 </label>
-                <input
-                  type="text"
-                  id="district"
-                  className="form-control mb-2 form-control"
-                  name="district"
-                />
+                
+                <select name="district" id="dist" className="form-select form-select-sm w-50 border-none mb-4">
+                  <option value="Ariyalur">Trichy</option>
+                  <option value="Trichy">Ariyalur</option>
+                  <option value="Thanjavur">Thanjavur</option>          
+                </select>
               </div>
 
               <div>
@@ -103,6 +106,7 @@ function Booking() {
           </form>
         </div>
       </div>
+      
     </>
   );
 }

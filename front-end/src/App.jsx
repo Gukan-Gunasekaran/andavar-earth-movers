@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import Header from './Header';
+import Header from './componenets/Header';
 import {Router,Routes,Route, BrowserRouter} from 'react-router-dom';
-import Navbar from './Navbar';
-import Body from './Body';
-import Admin from './Admin';
-import Booking from './Booking';
-import Footer from './Footer';
+import Navbar from './componenets/Navbar';
+import Body from './componenets/Body';
+import Admin from './componenets/Admin';
+import Booking from './componenets/Booking';
+import Footer from './componenets/Footer';
 import "./App.css";
-import ScrollTop from './ScrollTop';
-import Orders from './Orders';
+import ScrollTop from './componenets/ScrollTop';
+import Orders from './componenets/Orders';
 
 function App() {
 
