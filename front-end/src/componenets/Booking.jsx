@@ -34,7 +34,7 @@ function Booking() {
                   id="name"
                   type="text"
                   className="form-control "
-                  name="c_name"
+                  name="custName"
                 />
               </div>
             

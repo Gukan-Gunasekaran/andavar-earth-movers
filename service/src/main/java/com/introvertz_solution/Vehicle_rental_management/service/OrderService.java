@@ -3,7 +3,11 @@ package com.introvertz_solution.Vehicle_rental_management.service;
 import com.introvertz_solution.Vehicle_rental_management.entity.Orders;
 import com.introvertz_solution.Vehicle_rental_management.repository.OrderRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 
@@ -25,5 +29,10 @@ public class OrderService {
             return true;
         }
         return false;
+    }
+
+    public List<Orders> sGetOrders(int pNo,String col){
+        Pageable pageable= PageRequest.of(pNo,10, Sort.by(Sort.Direction.ASC,col));
+        return orderRepo.findAll(pageable).getContent();
     }
 }

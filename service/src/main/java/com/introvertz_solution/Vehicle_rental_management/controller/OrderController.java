@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/order")
-@CrossOrigin(origins = {"https://andavar-earth-movers.vercel.app/", "http://localhost:5173/"})
+@CrossOrigin(origins = {"https://andavar-earth-movers.vercel.app", "http://localhost:5173"})
 public class OrderController {
     @Autowired
     OrderService orderService;
@@ -22,8 +22,8 @@ public class OrderController {
     }
 
     @GetMapping("/get")
-    public List<Orders> getOrders(){
-        return orderService.getOrders();
+    public List<Orders> sGetOrders(@RequestParam int pNo,@RequestParam String col){
+        return orderService.sGetOrders(pNo,col);
     }
 
     @DeleteMapping("/delete/{d_id}")

@@ -52,30 +52,44 @@ function Body() {
       </div>
 
       <div className="row justify-content-center g-4 m-3">
-        {Imgs.map((image, index) => (
-          <div className="col-12 col-md-6 col-lg-5">
-            <div className="card card-hover">
-              <div className="card-body text-center">
-                <h1 className="card-title"> {Imgs[index].title}</h1>
-                <img
-                  key={index}
-                  src={image.img}
-                  className="card-img-top"
-                  alt="tractor"
-                />
-                <br />
-                <ul className="text-bold text-primary mb-1">
-                  {Imgs[index].works.map((work, i) => (
-                    <li className="nav-link text-dark text-decoration-none" key={i}>{work}</li>
-                  ))}
-                </ul>
-                <Link className="btn btn-primary mt-auto" to="booking" state={{ title: image.title }}>
-                  prebook
-                </Link>
+        <div className="row justify-content-center g-4 m-3">
+          {Imgs.map((image) => (
+            <div className="col-12 col-md-6 col-lg-5" key={image.title}>
+              <div className="card card-hover">
+                <div className="card-body text-center">
+                  <h1 className="card-title">{image.title}</h1>
+
+                  <img
+                    src={image.img}
+                    className="card-img-top"
+                    alt={image.title}
+                  />
+
+                  <br />
+
+                  <ul className="text-bold text-primary mb-1">
+                    {image.works.map((work) => (
+                      <li
+                        className="nav-link text-dark text-decoration-none"
+                        key={work}
+                      >
+                        {work}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    className="btn btn-primary mt-auto"
+                    to="booking"
+                    state={{ title: image.title }}
+                  >
+                    Prebook
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

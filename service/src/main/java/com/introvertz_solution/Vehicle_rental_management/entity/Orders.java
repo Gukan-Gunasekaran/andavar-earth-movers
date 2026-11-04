@@ -9,9 +9,10 @@ import lombok.Data;
 public class Orders {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long o_id;
-
-    private String c_name;
+    @Column(name = "o_id")
+    private Long orderId;
+    @Column(name="c_name")
+    private String custName;
     private String phone;
     private String street;
     private String city;
