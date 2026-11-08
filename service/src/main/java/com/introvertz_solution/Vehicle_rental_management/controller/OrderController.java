@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/order")
-@CrossOrigin(origins = {"https://andavar-earth-movers.onrender.com"})
+@CrossOrigin(origins = {"https://andavar-earth-movers.vercel.app/"})
 public class OrderController {
     @Autowired
     OrderService orderService;
