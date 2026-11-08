@@ -8,55 +8,55 @@ import ertiga from "../assets/Ertiga.jpg";
 function Body() {
   const Imgs = [
     {
-      title: "tractor",
+      title: "MASSEY FERGUSSON",
       img: mf,
       works: ["cultivation", "fertilization", "transportation"],
     },
     {
-      title: "Back-loader",
+      title: "JCB",
       img: jcb,
       works: ["tappering", "Pilliar pits", "Destruction works"],
     },
     {
-      title: "Bolero",
+      title: "BOLERO",
       img: bolero,
       works: ["Airport", "Travelling", "Vacation", "Temple Visit"],
     },
     {
-      title: "Ertiga",
+      title: "ERTIGA",
       img: ertiga,
       works: ["Airport", "Travelling", "Vacation", "Temple Visit"],
     },
   ];
 
   return (
-    <div>
-      <div className="d-flex flex-column  flex-md-row mt-4 justify-content-center align-items-center gap-4">
-        <span className="ps-3 card rounded">
-          <h1 className="">
-            Hello everyone i'm naveen Gnanasekaran <br />
-            ,we are offering Tractor and Loader Services <br />
-            for Farming,Cultivation and fertilization,
-            <br />
+    <div className="bg-dark">
+      <div className="d-flex flex-column  flex-md-row pt-4 justify-content-start align-items-center gap-4 mb-4">
+        <img
+          src={naveen}
+          alt="founder"
+          className="img-fluid rounded card-hover mx-3"
+          style={{ maxWidth: "200px", height: "auto" }}
+        />
+        <div className="px-3 card-dark rounded card-hover mt-auto">
+          <p className="fs-4 text-light">
+            Hello everyone i'm <span className="text-warning"> Naveen Gnanasekaran</span> <br />
+            ,we are seriving Transportation , Travelling Services
+            for Agro,Construction and vacation uses with cost effectiveness  eventually qualitywise no compromise.
             Building Destruction works.
-          </h1>
-        </span>
-        <span>
-          <img
-            src={naveen}
-            alt="founder"
-            className="img-fluid rounded "
-            style={{ maxWidth: "280px" }}
-          />
-        </span>
+          </p>
+        </div>
       </div>
 
-      <div className="row justify-content-center g-4 m-3">
-        <div className="row justify-content-center g-4 m-3">
+      <div>
+        <div className="row justify-content-start g-4 mb-5 mx-3">
           {Imgs.map((image) => (
-            <div className="col-12 col-md-6 col-lg-5" key={image.title}>
-              <div className="card card-hover">
-                <div className="card-body text-center">
+            <div
+              className="col-12 col-sm-6 col-md-6 col-lg-4"
+              key={image.title}
+            >
+              <div className="card card-hover h-100">
+                <div className="card-body text-center d-flex flex-column">
                   <h1 className="card-title">{image.title}</h1>
 
                   <img
@@ -65,9 +65,7 @@ function Body() {
                     alt={image.title}
                   />
 
-                  <br />
-
-                  <ul className="text-bold text-primary mb-1">
+                  <ul className="text-bold text-primary mb-1 mt-auto">
                     {image.works.map((work) => (
                       <li
                         className="nav-link text-dark text-decoration-none"
@@ -79,17 +77,18 @@ function Body() {
                   </ul>
 
                   <Link
-                    className="btn btn-primary mt-auto"
+                    className="btn btn-warning mt-auto"
                     to="booking"
                     state={{ title: image.title }}
                   >
-                    Prebook
+                    book
                   </Link>
                 </div>
               </div>
             </div>
           ))}
         </div>
+        <hr className="text-secondary text-center" />
       </div>
     </div>
   );

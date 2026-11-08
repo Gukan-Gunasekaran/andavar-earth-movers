@@ -3,15 +3,14 @@ package com.introvertz_solution.Vehicle_rental_management.controller;
 import com.introvertz_solution.Vehicle_rental_management.entity.Orders;
 import com.introvertz_solution.Vehicle_rental_management.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/order")
-@CrossOrigin(origins = {"https://andavar-earth-movers.vercel.app", "http://localhost:5173"})
+@CrossOrigin(origins = {"https://andavar-earth-movers.onrender.com"})
 public class OrderController {
     @Autowired
     OrderService orderService;
@@ -22,8 +21,8 @@ public class OrderController {
     }
 
     @GetMapping("/get")
-    public List<Orders> sGetOrders(@RequestParam int pNo,@RequestParam String col){
-        return orderService.sGetOrders(pNo,col);
+    public Page<Orders> getOrders(@RequestParam int pNo, @RequestParam String col, @RequestParam String sVal){
+        return orderService.getOrders(pNo,col,sVal);
     }
 
     @DeleteMapping("/delete/{d_id}")

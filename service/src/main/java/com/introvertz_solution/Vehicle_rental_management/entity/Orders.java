@@ -13,6 +13,7 @@ public class Orders {
     private Long orderId;
     @Column(name="c_name")
     private String custName;
+    private String vehicle;
     private String phone;
     private String street;
     private String city;

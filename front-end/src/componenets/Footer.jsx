@@ -11,12 +11,12 @@ function Footer(){
       }
     `}
 </style>
-<div className="bg-dark text-light py-5">
+<div className="bg-dark text-light">
     <div className="container">
-        <div className="row g-4">
+        <div className="row g-5">
            
-            <div className="col-lg-4 col-md-6">
-                <h5 className="mb-4">About Us</h5>
+            <div className="col-lg-4 col-md-6 footer-blue">
+                <h5 className="mb-4 text-primary p-2">About Us</h5>
                 <p className="mb-4">We are dedicated to providing innovative solutions that help businesses grow and succeed
                     in the digital age.</p>
                 <div className="social-links">
@@ -28,30 +28,28 @@ function Footer(){
             </div>
 
           
-            <div className="col-lg-2 col-md-6">
-                <h5 className="mb-4">Loader</h5>
+            <div className="col-lg-2 col-md-6 footer-hover rounded">
+                <h5 className="mb-4 text-warning p-2">Loader</h5>
                 <ul className="list-unstyled">
                     <li className="mb-2"><a href="#" className="footer-link ">Ground-Tapper</a></li>
                     <li className="mb-2"><a href="#" className="footer-link">Piller-Pits</a></li>
                     <li className="mb-2"><a href="#" className="footer-link">Dwelling</a></li>
-                    <li className="mb-2"><a href="#" className="footer-link">Contact</a></li>
+                    <li className="mb-2"><a href="#" className="footer-link">deconstruction</a></li>
                 </ul>
             </div>
 
       
-            <div className="col-lg-2 col-md-6">
-                <h5 className="mb-4">Tractor</h5>
+            <div className="col-lg-2 col-md-6 footer-hover rounded">
+                <h5 className="mb-4 text-warning p-2">Tractor</h5>
                 <ul className="list-unstyled">
-                    <li className="mb-2"><a href="#" className="footer-link">Truck Loading</a></li>
+                    <li className="mb-2"><a href="#" className="footer-link">Loading</a></li>
                     <li className="mb-2"><a href="#" className="footer-link">Ground-Flattering</a></li>
-                    <li className="mb-2"><a href="#" className="footer-link">Marketing</a></li>
-                    <li className="mb-2"><a href="#" className="footer-link">Fertilizing</a></li>
-                    <li className="mb-2"><a href="#" className="footer-link">Cultivation</a></li>
+                    <li className="mb-2"><a href="#" className="footer-link">Agricultural</a></li>
                 </ul>
             </div>
 
-            <div className="col-lg-4 col-md-6">
-                <h5 className="mb-4">Contact Info</h5>
+            <div className="col-lg-4 col-md-6 footer-hover rounded">
+                <h5 className="mb-4 text-warning p-1">Contact Info</h5>
                 <ul className="list-unstyled">
                     <li className="mb-3">
                         <i className="bi bi-geo-fill me-2"></i>
@@ -70,11 +68,11 @@ function Footer(){
         </div>
 
        
-        <div className="row mt-1">
+        <div className="row">
             <div className="col-12">
                 <hr className="mb-5"/>
-                <div className="text-center">
-                    <p className="mb-0">&copy; 2026 Aandavar Transports. All rights reserved.</p>
+                <div className="text-center footer-text">
+                    <p className="mb-5">&copy; 2026 Aandavar Transports. All rights reserved.</p>
                 </div>
             </div>
         </div>

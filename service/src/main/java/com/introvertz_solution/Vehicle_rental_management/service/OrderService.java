@@ -3,9 +3,11 @@ package com.introvertz_solution.Vehicle_rental_management.service;
 import com.introvertz_solution.Vehicle_rental_management.entity.Orders;
 import com.introvertz_solution.Vehicle_rental_management.repository.OrderRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 
@@ -31,8 +33,24 @@ public class OrderService {
         return false;
     }
 
-    public List<Orders> sGetOrders(int pNo,String col){
-        Pageable pageable= PageRequest.of(pNo,10, Sort.by(Sort.Direction.ASC,col));
-        return orderRepo.findAll(pageable).getContent();
+    public Page<Orders> getOrders(int pNo, String col, String sVal) {
+
+        Pageable pageable = PageRequest.of(
+                pNo, 10, Sort.by(Sort.Direction.ASC, col)
+        );
+
+        Specification<Orders> spec = (root, query, cb) -> {
+
+            if (sVal == null || sVal.isBlank()) {
+                return cb.conjunction();
+            }
+
+            return cb.like(
+                    cb.lower(root.get(col).as(String.class)),
+                    sVal.toLowerCase() + "%"
+            );
+        };
+
+        return orderRepo.findAll(spec, pageable);
     }
 }

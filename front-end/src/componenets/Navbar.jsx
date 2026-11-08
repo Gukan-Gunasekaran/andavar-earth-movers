@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <div className="sticky-top">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
+        <div className="container-fluid ">
           <Link className="navbar-brand text-warning" to="#">
             A
           </Link>
@@ -54,7 +54,7 @@ function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <hr /> className="dropdown-divider"
+                    <hr className="dropdown-divider"/> 
                   </li>
                   <li>
                     <Link className="dropdown-item" to="#">
