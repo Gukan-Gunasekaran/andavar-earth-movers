@@ -36,7 +36,7 @@ function Orders() {
     deleteOrder(d_id)
       .then(() => {
         setD_id("");
-
+        alert("deleted successfully");
         if (orders.length === 1 && currentPage > 1) {
           setCurrentPage((prev) => prev - 1);
         } else {
