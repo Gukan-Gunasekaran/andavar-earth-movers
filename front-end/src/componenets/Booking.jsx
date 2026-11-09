@@ -27,95 +27,126 @@ function Booking() {
   };
   return (
     <>
-      <div className=" d-flex justify-content-center align-items-center p-5">
-        <div className="card">
-          <form className="form" onSubmit={HandleSubmit}>
-            <h1 className="card-header bg-dark text-light">{title}</h1>
-            <div className="card-body">
-              <div className="d-flex flex-column mb-2 ">
-                <label htmlFor="name" className="me-2">
-                  Name
-                </label>
+      <div className="container-fluid py-4 mb-5 ">
+        <div className="row justify-content-center">
+          <div className="col-12 col-sm-10 col-md-8 col-lg-5">
+            <div className="card shadow">
+              <form className="form" onSubmit={HandleSubmit}>
+                <h1 className="card-header bg-dark text-light fs-4">{title}</h1>
 
-                <input
-                  id="name"
-                  type="text"
-                  className="form-control column text-capitalize"
-                  name="custName"
-                />
-              </div>
+                <div className="card-body">
+                  <div className="row g-3">
+                    {/* Name */}
+                    <div className="col-12">
+                      <label htmlFor="name" className="form-label">
+                        Name
+                      </label>
+                      <input
+                        id="name"
+                        type="text"
+                        className="form-control form-control-sm text-capitalize"
+                        name="custName"
+                        required
+                      />
+                    </div>
 
-              <div className="d-flex mb-2 ">
-                <label htmlFor="phno" className="me-2">
-                  Phone
-                </label>
-                <input
-                  type="number"
-                  id="phno"
-                  maxLength={10}
-                  className="form-control mb-2"
-                  name="phone"
-                />
+                    {/* Phone */}
+                    <div className="col-12 col-md-6">
+                      <label htmlFor="phno" className="form-label">
+                        Phone
+                      </label>
+                      <input
+                        type="tel"
+                        id="phno"
+                        maxLength={10}
+                        pattern="[0-9]{10}"
+                        className="form-control form-control-sm"
+                        name="phone"
+                        required
+                      />
+                    </div>
 
-                <label htmlFor="street" className="me-2">
-                  street
-                </label>
-                <input
-                  type="text"
-                  id="street"
-                  className="form-control mb-2 form-control text-capitalize"
-                  name="street"
-                />
-              </div>
+                    {/* Street */}
+                    <div className="col-12 col-md-6">
+                      <label htmlFor="street" className="form-label">
+                        Street
+                      </label>
+                      <input
+                        type="text"
+                        id="street"
+                        className="form-control text-capitalize form-control-sm"
+                        name="street"
+                        required
+                      />
+                    </div>
 
-              <div className="d-flex mb-2 ">
-                <label htmlFor="city" className="me-2">
-                  city
-                </label>
-                <input
-                  type="text"
-                  id="city"
-                  name="city"
-                  className="form-control mb-2 text-capitalize"
-                />
-                <label htmlFor="taluk" className="me-2">
-                  taluk
-                </label>
-                <input
-                  type="text"
-                  id="taluk"
-                  className="form-control mb-2 form-control text-capitalize"
-                  name="taluk"
-                />
-              </div>
+                    {/* City */}
+                    <div className="col-12 col-md-6">
+                      <label htmlFor="city" className="form-label">
+                        City
+                      </label>
+                      <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        className="form-control text-capitalize form-control-sm"
+                        required
+                      />
+                    </div>
 
-              <div className="d-flex"></div>
-              <div className="d-flex">
-                <label htmlFor="district" className="me-2">
-                  district
-                </label>
+                    {/* Taluk */}
+                    <div className="col-12 col-md-6">
+                      <label htmlFor="taluk" className="form-label">
+                        Taluk
+                      </label>
+                      <input
+                        type="text"
+                        id="taluk"
+                        className="form-control text-capitalize form-control-sm"
+                        name="taluk"
+                        required
+                      />
+                    </div>
 
-                <select
-                  name="district"
-                  id="dist"
-                  className="form-select form-select w-50 border-none mb-4"
-                >
-                  <option value="Ariyalur">Trichy</option>
-                  <option value="Trichy">Ariyalur</option>
-                  <option value="Thanjavur">Thanjavur</option>
-                </select>
-              </div>
+                    {/* District */}
+                    <div className="col-12">
+                      <label htmlFor="dist" className="form-label">
+                        District
+                      </label>
+                      <select
+                        name="district"
+                        id="dist"
+                        className="form-select form-select-sm"
+                        required               
+                      >
+                        <option value="">Select District</option>
+                        <option value="Ariyalur">Ariyalur</option>
+                        <option value="Trichy">Trichy</option>
+                        <option value="Thanjavur">Thanjavur</option>
+                      </select>
+                    </div>
 
-              <div>
-                <button className="btn btn-success me-2" type="submit">
-                  submit
-                </button>
-                <button className="btn btn-danger" type="reset" to="#">
-                  clear
-                </button>
-              </div>
+                    {/* Buttons */}
+                    <div className="col-12 d-flex flex-wrap gap-2">
+                      <button
+                        className="btn btn-success flex-grow-1"
+                        type="submit"
+                      >
+                        Submit
+                      </button>
+
+                      <button
+                        className="btn btn-danger flex-grow-1"
+                        type="reset"
+                      >
+                        Clear
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </>

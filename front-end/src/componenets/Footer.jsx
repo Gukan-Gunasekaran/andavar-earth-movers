@@ -16,7 +16,7 @@ function Footer(){
         <div className="row g-5">
            
             <div className="col-lg-4 col-md-6 footer-blue">
-                <h5 className="mb-4 text-primary p-2">About Us</h5>
+                <h5 className="mb-4 text-primary p-2 title-hover">About Us</h5>
                 <p className="mb-4">We are dedicated to providing innovative solutions that help businesses grow and succeed
                     in the digital age.</p>
                 <div className="social-links">

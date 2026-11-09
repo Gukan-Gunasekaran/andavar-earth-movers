@@ -51,14 +51,9 @@ function Orders() {
     setCurrentPage(1);
   };
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className="d-flex flex-column min-vh-100 mb-2">
       <div className="d-flex flex-row flex-wrap justify-content-center gap-2 bg-warning p-2 border-dark">
         <button className="btn btn-sm bi bi-person-circle fs-6 border-0"></button>
-        <span>
-          <label className="btn btn-light btn-sm " disabled htmlFor="colum">
-            sort
-          </label>
-        </span>
         <span>
           <select
             id="colum"
@@ -67,7 +62,7 @@ function Orders() {
             value={colum}
             onChange={handleSelect}
           >
-            <option>order</option>
+            <option hidden>Sort</option>
             <option value="custName">name</option>
             <option value="phone">phone</option>
             <option value="city">city</option>
@@ -140,7 +135,7 @@ function Orders() {
               </table>
             </div>
 
-            <div className="d-flex justify-content-center gap-2 mb-2">
+            <div className="d-flex justify-content-center gap-2 mb-2 p-5">
               <span className="">
                 <input
                   type="number"
@@ -160,7 +155,7 @@ function Orders() {
               </span>
             </div>
 
-            <div className="d-flex justify-content-end mb-2 gap-1">
+            <div className="d-flex justify-content-end gap-1 p-5 mb-5">
               <button
                 className="btn btn-primary btn-sm"
                 disabled={currentPage === 1}

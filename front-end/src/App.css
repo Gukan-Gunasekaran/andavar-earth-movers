@@ -60,6 +60,7 @@ main {
 
 .title-hover:hover {
   color: rgb(255, 238, 0);
+  font-weight: 15px;
 }
 
 .footer-text:hover {
