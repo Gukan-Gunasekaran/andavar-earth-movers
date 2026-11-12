@@ -4,8 +4,8 @@ function Navbar() {
   return (
     <div className="sticky-top">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid ">
-          <Link className="navbar-brand text-warning" to="#">
+        <div className="container-fluid bg-warning">
+          <Link className="navbar-brand text-dark" to="#">
             A
           </Link>
           <button
@@ -23,16 +23,16 @@ function Navbar() {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="#">
-                  Home
+                  
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="#">
-                  Link
+                  
                 </Link>
               </li>
 
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown" hidden>
                 <Link
                   className="nav-link dropdown-toggle"
                   to="#"
@@ -40,47 +40,50 @@ function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                   dropdown
+                  
                 </Link>
                 <ul className="dropdown-menu">
+                 
                   <li>
                     <Link className="dropdown-item" to="#">
-                      Action
+                      item
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="#">
-                      Another action
+                       something
                     </Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider"/> 
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="#">
-                      Something else here
+                    <Link className="dropdown-item" to="#" hidden>
+                       something
                     </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
                 <Link className="nav-link disabled" aria-disabled="true">
-                  Disabled
+                 
                 </Link>
               </li>
             </ul>
-            <Link className="btn nav-link" to="Orders">
+            <Link className="btn nav-link" to="dashboard">
               <i className="bi bi-person-circle fs-4 me-2"></i>
             </Link>
 
-            <form className="d-flex" role="search">
+            <form className="d-flex" role="search" >
               <input
                 className="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
+                hidden
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-success" type="submit" hidden>
                 Search
               </button>
             </form>

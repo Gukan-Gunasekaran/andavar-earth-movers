@@ -1,9 +1,9 @@
 import axios from "axios";
-import { useLocation, Link } from "react-router-dom";
 
 function Booking() {
   const location = useLocation();
   const title = location.state?.title || "Vehicle";
+  const baseUrl="https://andavar-earth-movers.onrender.com"
   const HandleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -16,7 +16,7 @@ function Booking() {
     data.vehicle = title;
     try {
       const response = await axios.post(
-        "https://andavar-earth-movers.onrender.com/order/save",
+        `${baseUrl}/order/save`,
         data,
       );
       console.log(response.data);

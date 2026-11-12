@@ -53,4 +53,25 @@ public class OrderService {
 
         return orderRepo.findAll(spec, pageable);
     }
+
+    public Orders updateOrder(Long orderId,Orders editOrder){
+        Orders order= orderRepo.findById(orderId)
+                .orElseThrow(()->new RuntimeException("order not found"));
+        if(editOrder.getCustName()!=null && !editOrder.getCustName().isBlank()){
+            order.setCustName(editOrder.getCustName());
+        }
+        if(editOrder.getCity()!=null && !editOrder.getCity().isBlank()){
+            order.setCity(editOrder.getCity());
+        }
+        if(editOrder.getDistrict()!=null && !editOrder.getDistrict().isBlank()){
+            order.setDistrict(editOrder.getDistrict());
+        }
+        if(editOrder.getTaluk()!=null && !editOrder.getTaluk().isBlank()){
+            order.setTaluk(editOrder.getTaluk());
+        }
+        if(editOrder.getPhone()!=null && !editOrder.getPhone().isBlank()){
+            order.setPhone(editOrder.getPhone());
+        }
+        return orderRepo.save(order);
+    }
 }

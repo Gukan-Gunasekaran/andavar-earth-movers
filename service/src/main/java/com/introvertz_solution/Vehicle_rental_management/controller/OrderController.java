@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/order")
-@CrossOrigin(origins = {"https://andavar-earth-movers.vercel.app/"})
+@CrossOrigin(origins = {"http://localhost:5173"})
 public class OrderController {
     @Autowired
     OrderService orderService;
@@ -23,6 +23,11 @@ public class OrderController {
     @GetMapping("/get")
     public Page<Orders> getOrders(@RequestParam int pNo, @RequestParam String col, @RequestParam String sVal){
         return orderService.getOrders(pNo,col,sVal);
+    }
+
+    @PatchMapping("/edit/{orderId}")
+    public ResponseEntity<Orders> editOrder(@PathVariable Long orderId,@RequestBody Orders editOrder){
+        return ResponseEntity.ok(orderService.updateOrder(orderId,editOrder));
     }
 
     @DeleteMapping("/delete/{d_id}")

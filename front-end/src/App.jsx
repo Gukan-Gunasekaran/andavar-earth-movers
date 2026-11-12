@@ -8,8 +8,8 @@ import Booking from './componenets/Booking';
 import Footer from './componenets/Footer';
 import "./App.css";
 import ScrollTop from './componenets/ScrollTop';
-import Orders from './componenets/Orders';
-import Dashboard from './dashboards/Dashboard';
+import Dashboard from './componenets/DashBoard'
+import Edit from './componenets/Edit';
 
 function App() {
 
@@ -19,14 +19,14 @@ function App() {
     <ScrollTop/>
     <Header/>
     <Routes>
-      <Route path='/' element={<><Navbar/> <Body/> </>}/>
+      <Route path='/' element={<><Navbar/> <Body/> <Footer/></>}/>
       <Route path='/admin' element={<Admin/>}/>
-      <Route path='/orders' element={<Orders/>}/>
+      <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path='/booking' element={<Booking/>}/>
-      <Route path='/dashboard'element={<Dashboard/>}/>
+      <Route path="orders/edit" element={<Edit/>}/>
     </Routes>
     </BrowserRouter>
-   <Footer/>
+   
    </div>
   )
 }
