@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import ScrollTop from "./ScrollTop";
 function Booking() {
   const location = useLocation();
   const title = location.state?.title || "Vehicle";

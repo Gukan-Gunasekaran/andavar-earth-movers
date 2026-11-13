@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { deleteOrder, getOrders } from "../services/OrderService";
-import { Link, redirect } from "react-router-dom";
+import { Link} from "react-router-dom";
 import Edit from "./Edit";
 
 function Orders() {

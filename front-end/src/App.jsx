@@ -23,7 +23,7 @@ function App() {
       <Route path='/admin' element={<Admin/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path='/booking' element={<Booking/>}/>
-      <Route path="orders/edit" element={<Edit/>}/>
+      <Route path="dashboard/edit" element={<Edit/>}/>
     </Routes>
     </BrowserRouter>
    
